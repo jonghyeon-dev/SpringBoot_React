@@ -4,13 +4,21 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.src.reacttest.model.UserVO;
 import com.src.reacttest.model.common.ResponseData;
+import com.src.reacttest.repository.UserRepository;
 
 @RestController
 public class FirstController {
+
+    @Autowired
+    private UserRepository userRepository;
+
+
     @GetMapping("/")
     public String test(){
         return "Fisrt Controller";
@@ -31,5 +39,11 @@ public class FirstController {
         js.setSucceed(true);
         js.setMessage("메시지");
         return js;
+    }
+
+    @GetMapping("/getUser")
+    public UserVO getUser(){
+        UserVO userVO = userRepository.findByUserId("10");
+        return userVO;
     }
 }
