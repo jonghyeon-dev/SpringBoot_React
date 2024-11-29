@@ -18,7 +18,7 @@ public class FirstController {
 
     @GetMapping("/showMe")
     public List<String> showMe(){
-        return Arrays.asList("첫번째 인사","두번쨰 인사");
+        return Arrays.asList("첫번째 인사","두번째 인사");
     }
 
     @GetMapping("/getData")
