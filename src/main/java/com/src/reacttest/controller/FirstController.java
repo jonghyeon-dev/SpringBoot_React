@@ -43,7 +43,10 @@ public class FirstController {
 
     @GetMapping("/getUser")
     public UserVO getUser(){
-        UserVO userVO = userRepository.findByUserId("10");
+        UserVO userVO = userRepository.findByUserId("kimn");
+        userVO.setSeq(null);
+        userVO.setUserGrant("");
+        userVO.setUserPwd("");
         return userVO;
     }
 }
