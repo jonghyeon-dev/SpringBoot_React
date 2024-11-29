@@ -38,7 +38,7 @@ function Home() {
         <header className="App-header">
           <h1>Welcome React App</h1>
           { !loading ?
-            (second.succeed === true && !loading?
+            (second.succeed === true ?
               <div className="container">
                 <ul>
                   {first.map((v,idx)=><li key={`${idx}-${v}`}>{v}</li>)}
