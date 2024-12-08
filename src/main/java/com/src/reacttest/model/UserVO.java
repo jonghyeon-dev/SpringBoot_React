@@ -23,7 +23,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Entity(name="TUSR00100")
+@Entity(name="USER_INFO")
 public class UserVO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

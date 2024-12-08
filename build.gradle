@@ -31,6 +31,7 @@ dependencies {
 	implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4:1.16' // log4jdbc
 	implementation 'commons-fileupload:commons-fileupload:1.5' //  file upload
 	implementation 'com.google.code.gson:gson:2.10.1' // gson
+	runtimeOnly 'org.postgresql:postgresql' // postgresql
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j' // mysql
